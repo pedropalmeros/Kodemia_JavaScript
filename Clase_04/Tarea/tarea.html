@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Homework Class 4</title>
+    <link rel="stylesheet" href="./CSS/styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header__Container mainContainer">
+            <h1 class="mainTitle mainTitle--config">User interaction</h1>
+            <h2>Stings and its methods - Class 4 </h2>       
+
+        </div>        
+    </header>
+    <main class="mainContainer">        
+        <article>
+            <h2> Strings </h2>
+            <p>All strings can be seen as an array of characters, the array begins at index 0. </p>
+            <p>Consider the string <samp>Kodemia</samp>, this string begins at 0 and the letter attached
+            to this index is <samp>K</samp>, letter <samp>o</samp> is attached to the index 1 and so on.</p>
+
+            <p>Consider the next code </p>
+
+            <div class="genericCode">
+                <code>myString = "Kodemia";
+                </code>
+            </div>
+
+            <p>To access to each letter the <samp>string_name[]</samp>, hence if i would like access to the 
+            letter <samp>i</samp>, it can be done by <samp>myString[5]</samp> </p>  
+        </article>
+
+        <article>
+            <h3> Length - Property - looks like an attribute</h3>
+            <p>This method (function of an object) returns the length of the string</p>
+
+            <div class="genericCode">
+                <code>myString = 'Kodemia';<br>
+                    console.log(myString.length);
+                </code>
+            </div>
+
+            The output at the console might be <samp>7</samp>.
+        </article>
+
+        <article>
+            <h3> <samp>chartAt(index)</samp></h3>
+            <p>With this method we can access to the index passed as argument. 
+
+                <div class="genericCode">
+                    <code>myString = 'Kodemia';<br>
+                        console.log(myString.charAt(4));
+                    </code>
+                </div>
+                The output at the console might be <samp>m</samp>
+        </article>
+
+        <article>
+            <h3> <samp>concat(other_string)</samp></h3>
+            <p>With this method we can concatenate two strings, consider the next code 
+
+                <div class="genericCode">
+                    <code>string_1 = 'JavaScript ';<br>
+                        string_2 = 'Bootcamp ';<br>
+                        string_3 = ' :)';<br>
+                        string_1.concat(string_2,string_3);<br>
+                        console.log(string_1.concat(string_2,string_3));
+                    </code>
+                </div>
+                <p>The output at the console might be <samp>JavaScript Bootcamp :)</samp>, note that the method is being invoked 
+                from the string_1, that is why it is the first word and then the other words in the order they are send as parameters</p>
+        </article>
+
+
+        <article>
+            <h3> <samp>endsWidth()</samp></h3>
+            <p>This method returns a true or false if the string ends with the string passed as argument to the method</p>
+
+                <div class="genericCode">
+                    <code>let string_1 = "Ayer lavé la camioneta";<br>
+                        console.log(string_1.endsWith('Camioneta'));<br>
+                        console.log(string_1.endsWith('camioneta'));
+                    </code>
+                </div>
+                <p>The output at the console might be <samp>JavaScript Bootcamp :)</samp>, note that the method is being invoked 
+                from the string_1, that is why it is the first word and then the other words in the order they are send as parameters</p>
+        </article>
+
+        <article>
+            
+        </article>
+
+
+
+        
+    </main>
+
+
+    <script src='./Script/app.js'></script>
+    
+</body>
+</html>
