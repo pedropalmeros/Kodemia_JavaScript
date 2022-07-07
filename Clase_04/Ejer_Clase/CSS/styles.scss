@@ -1,0 +1,63 @@
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; /*1rem = 10 px;*/
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body{
+    border-color: red;
+    font-size: 2rem;
+}
+
+h1{
+    font-size: 4rem;
+}
+h2{
+    font-size: 3rem
+}
+h3{
+    font-size: 2.5rem;
+}
+
+/***** HEADER  ******/
+.mainContainer{
+    max-width: 80%;
+    margin: 0 auto;
+
+}
+
+.mainTitle--config{
+    display: flex;
+    justify-content: center;
+}
+
+.genericCode{
+    display: block;
+    margin: 1rem 1rem 1rem 1rem;
+    padding: 3rem;
+    border: 1px solid grey;
+    border-radius:5px;
+    background-color: #cfcfcf;
+}
+
+.genericImages__container{
+    margin: 5rem auto;
+
+    width: 60%;
+    display: flex;
+    flex-direction: column ;
+    align-items: center;
+    img{
+        width:80%;
+        border: 1px solid grey;
+        padding: 1rem;
+        border-radius: 5px;
+    }
+    
+}
+
