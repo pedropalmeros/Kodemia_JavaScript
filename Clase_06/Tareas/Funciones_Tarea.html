@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays</title>
+    <link rel="stylesheet" href="./CSS/styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header__Container mainContainer">
+            <h1 class="mainTitle mainTitle--config">Arrays</h1>
+            <h2>Introduction</h2>       
+
+        </div>        
+    </header>
+    <main class="mainContainer">        
+        <article>
+            <h2> Array</h2>
+            <p>An Array is a structure of ordered items, they could be of the same type or different, although the most common way
+               to use is it with elements of the same type. The elements are stored in contiguous address or index. There are different
+               ways to declare an array. In the block below are shown some of them.
+            </p>
+            
+            <div class="genericCode">
+                <code>const arr1 = new Array(10);<br>
+                    const arr2 = [];<br>
+                    let videoJuegos = ['Mario 3','Megaman','Chrono Trigger'];
+                </code>
+            </div>
+
+            <p>Observe that in the first two initializations is the word <samp>const</samp> with this the nature of the array is locked,
+            hence if want arr to be an integer or a string that cast will not be able to be done, hence, in this case the <samp>const</samp>
+            locks the type of data structure, but the content of the data is able to change.</p>
+
+            <p>In the first line the array has 10 elements since the begining, (¿Can it change during the program or its size is fixed?)
+                The second array is just an empty array. The third array has three elements and all of them are strings
+            </p>
+
+            <p> If you want to access to the a certain element, then you can use the index position, the index usually begins at
+                0, hence to access to 'Megaman' the correct way might be
+            </p>
+
+            <div class="genericCode">
+                <code>let videoJuegos = ['Mario 3','Megaman','Chrono Trigger'];<br>
+                    let myGame = videoJuegos(1);
+                </code>
+            </div>
+
+
+            <p>As it has been mentioned, the data type of the elements of an aray can be diffent, even there can be elements that can be 
+                a function, in the example below the  element after false is an arrow function, and literal object, and even an array can be
+                nested inside an array.
+            </p>
+            <div class="genericCode">
+                <code>let arrayMutipleData = ['hola', 34, 1+1, true, false, ()=>{}, {a: 1},['spiderman','batman','Goku']];
+                </code>
+            </div>
+
+            <p>In the case of nested arrays, if we would like to access to 'Goku', then  the correct expression might be</p> 
+            <div class="genericCode">
+                <code>let arrayMutipleData = ['hola', 34, 1+1, true, false, ()=>{}, {a: 1},['spiderman','batman','Goku']];<br>
+                    let elMasFuerte = arrayMutipleData[7][2];
+                </code>
+            </div>
+        </article>
+
+        <article>
+            <h2>Arrays Methods</h2>
+
+            <h3><samp>.length()</samp></h3>
+            <p> This method as in strings, will return the number of elements in an array.  </p> 
+
+            <div class="genericCode">
+                <code>let videoJuegos = ['Mario 3','Megaman','Chrono Trigger'];<br>
+                    let numberVideogames = videoJuegos.length; <br>
+                    let lastGame = videoJuegos[length-1];
+                </code>
+            </div>
+
+            <h3><samp>.forEach()</samp></h3>
+            <p>This method most of times is used with a function as argument, consider the next code </p>
+
+            <div class="genericCode">
+                <code>let dragonBallZ = ['Goku','Gohan','Picolo','Roshi','Vegueta'];<br>
+                    dragonBallZ.forEach((name, index)=>{console.log({name,index})})
+                </code>
+            </div>
+            <p> In this case the argument of <samp>.forEach()</samp> is an arrow function that will print all the values
+                of the array.</p>
+  
+            <div class="genericImages__container">
+                <img src="./Img/img_01.png" class="genericImage_Image" alt="forEach output">
+                <div class="genericImages__footer">
+                    <p>This is the output</code></p> 
+                </div>
+            </div>
+        </article>
+
+        <article>
+            <h2><sam>.push()</sam></h2>
+            <p> This method is used to append a new element at the end of the array. </p> 
+
+            <div class="genericCode">
+                <code>let dragonBallZ = ['Goku','Gohan','Picolo','Roshi','Vegueta'];<br>
+                    dragonBallZ.push('Trunks');
+                    console.log(dragonBallZ);
+                </code>
+            </div>
+
+            <div class="genericCode">
+                <div class="genericImages__container">
+                    <img src="./Img/img_02.png" class="genericImage_Image" alt="console.war and error">
+                    <div class="genericImages__footer">
+                        <p>Output after pushing an element</p> 
+                    </div>
+                </div>
+
+            </div>
+        </article>
+
+        <article>
+            <h2><sam>.unshift()</sam></h2>
+            <p> This method is used to insert a a new element at the start of the array. </p> 
+
+            <div class="genericCode">
+                <code>let dragonBallZ = ['Goku','Gohan','Picolo','Roshi','Vegueta'];<br>
+                    dragonBallZ.unshift('Trunks');
+                    console.log(dragonBallZ);
+                </code>
+            </div>
+
+            <div class="genericCode">
+                <div class="genericImages__container">
+                    <img src="./Img/img_03.png" class="genericImage_Image" alt="console.war and error">
+                    <div class="genericImages__footer">
+                        <p>Ouput after unshifting an elment, observe that now Trunks is at the beginning of the array</p> 
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <article>
+            <h2><sam>.pop()</sam></h2>
+            <p> This method is used to remove the last element of the array but it is sent to a variable. </p> 
+
+            <div class="genericCode">
+                <code>let dragonBallZ = ['Goku','Gohan','Picolo','Roshi','Vegueta'];<br>
+                    let lastWarrior = dragonBallZ.pop();<br>
+                    console.log(dragonBallZ);
+                </code>
+            </div>
+
+           
+                <div class="genericImages__container">
+                    <img src="./Img/img_04.png" class="genericImage_Image" alt="console.war and error">
+                    <div class="genericImages__footer">
+                        <p>Ouput after popping the last element ('Vegueta')</p> 
+                    </div>
+                </div>
+          
+        </article>
+
+        <article>
+            <h2><sam>.splice()</sam></h2>
+            <p> This method accept as aguments two numbers, the first one is the first element to be deleted and the second
+                number is the number of elements to be deleted. </p> 
+
+            <div class="genericCode">
+                <div class="genericImages__container">
+                    <img src="./Img/img_06.png" class="genericImage_Image" alt="console.war and error">
+                    <div class="genericImages__footer">
+                        <p>Ouput after popping the last element ('Vegueta')</p> 
+                    </div>
+                </div>
+            </div>
+
+           
+                <div class="genericImages__container">
+                    <img src="./Img/img_05.png" class="genericImage_Image" alt="console.war and error">
+                    <div class="genericImages__footer">
+                        <p>Ouput after popping the last element ('Vegueta')</p> 
+                    </div>
+                </div>
+          
+        </article>
+
+        <article>
+            <h2><sam>.indexOf()</sam></h2>
+            <p>This method returns the index of the argument, of course, if the element exists within the array. If
+                the element we are lonking for is not in the array then the return is set to -1
+            </p>
+            <div class="genericCode">
+                <div class="genericImages__container">
+                    <img src="./Img/img_07.png" class="genericImage_Image" alt="console.war and error">
+                    <div class="genericImages__footer">
+                        <p>Code using indexOf</p> 
+                    </div>
+                </div>
+            </div>
+
+           
+                <div class="genericImages__container">
+                    <img src="./Img/img_08.png" class="genericImage_Image" alt="console.war and error">
+                    <div class="genericImages__footer">
+                        <p>Ouput when the element is in the array and when it is not</p> 
+                    </div>
+                </div>
+          
+        </article>
+
+    </main>
+
+
+    <script src='./Script/app.js'></script>
+    
+</body>
+</html>

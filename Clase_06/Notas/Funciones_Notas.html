@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funtions</title>
+    <link rel="stylesheet" href="./CSS/styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header__Container mainContainer">
+            <h1 class="mainTitle mainTitle--config">Functions</h1>
+            <h2>Introduction</h2>       
+
+        </div>        
+    </header>
+    <main class="mainContainer">        
+        <article>
+            <h2> Function</h2>
+            <p>A funciton is a block of JavaScript code that is defined once gbut may be executed, or invoked, any number of times.
+                JavaScript functions are parametrized: a funciton definition may include a list of identifiers, known as parameters,
+                that work as local variables for the body function. 
+            </p>
+
+            <p>Functions often use their argument values to copute a reuturn value that  become the value
+                 of the function-invocation expression.
+            </p>
+
+            <p>If a function is assigned to a property of an object, it is known as a method of that object. When a function is invoked
+                on or through an object, that object is the incation context or <samp>this</samp>(like c++???) value for the function.
+               Functions designed to initalize a newly created object al called constructors. 
+            </p>
+
+            <p>Functions ar objects, and the can be manipulated by programs. JavaScript can assign functios to variables and pass them to other functions. 
+
+            </p>
+        </article>
+
+
+        <article>
+            <h2> Defining functions</h2>
+            In order to define a function 
+            <ol>
+                <li>Using the reserved word <samp>function</samp></li>
+                <li>Indentifier or function name</li>
+                <li>The list of parameters between parenthesis</li>
+                <li>The block of code</li>
+                <li>Optional the Return function</li> 
+            </ol>
+
+            <div class="genericCode">
+                <div class="genericImages__container">
+                    <img src="./Img/fnc_01.png" class="genericImage_Image" alt="first function example">
+                    <div class="genericImages__footer">
+                        <p>Output after pushing an element</p> 
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <article>
+            <h2> Function Expressions</h2>
+            Function expressions look like function declarations, but they apear within the context of
+            a larger expressions or statement, and the name is optional
+
+            <div class="genericCode">
+                <div class="genericImages__container">
+                    <img src="./Img/fnc_03.png" class="genericImage_Image" alt="first function example">
+                    <div class="genericImages__footer">
+                        <p>These codes are simmilar, the main difference is the Function Expression</p> 
+                    </div>
+                </div>
+            </div>
+
+            The Function Expressions are usefull when trying to implement some kind of recursion
+            <div class="genericCode">
+                <div class="genericImages__container">
+                    <img src="./Img/fnc_04.png" class="genericImage_Image" alt="first function example">
+                    <div class="genericImages__footer">
+                        <p>Function called from itself</p> 
+                    </div>
+                </div>
+            </div>
+
+            <p>A function declaraton actually declares a variabel and assigns a function object to it. A Function
+            expression, on the other hand, does not declare a variable: it is up to you to assign the newly defined
+            function object to a constant or variable if you are going to need to refer to it multiple times. It
+            is a good practice to use <samp>const</samp> with function espressions so you don't accidentally 
+            overwrite your functions by assigning new values. </p>
+
+            <p>When you use the declaration form, the function objects are created before the code that contains them starts
+                to run, and the definitions are hoisted so that you can call these functions from code that appears above 
+                the definition statement. This iis not true for functios defined as expressions, however: these functions
+                do not exists until the expression that defines them are actually evaluated. Furthermore, in order to invoke
+                a function, you must be able to refer to it, and you can't refer to a function defined as an expression until
+                it is assigned to a variable, so functions defined with expressions cannot be invoked before they are defined
+            </p> 
+        </article>
+
+
+
+        <article>
+            <h2> Arrow Functions</h2>
+        </article>
+
+
+
+
+        
+      
+
+    </main>
+
+
+    <script src='./Script/app.js'></script>
+    
+</body>
+</html>
