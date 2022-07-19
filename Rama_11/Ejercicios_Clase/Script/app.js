@@ -129,26 +129,6 @@ koders.forEach((innerObj)=>{
 console.log(`La suma de todas las edades es: ${sumaEdades}`)
 console.log(`---------------------`)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /***********
  * * Del objeto library (dado mas adelante)
 * 1. Obtener el numero de libros que se estan leyendo
@@ -191,3 +171,37 @@ let libros = library.map((innerObj)=>{
     return innerObj.title;
 });
 console.log(`Los autores de los librosson ${libros}`);
+
+/***************************************
+ *  Métodos definidos por el usuario
+ * ***************************************/
+
+ let player1 = {
+    name:'Conan'
+    vidas: 5,
+    energy: 10,
+
+    updateVidas: function (){
+        if(energy <= 0){
+            this.vidas-=1;
+        }
+    }
+
+    describe: function(){
+        console.log(`${this.name} | ${this.vidas} | ${this.energy}`);
+
+    }
+ }
+
+ let player2 = {...player1}
+ player2.energy = 50;
+ player2.name = 'Goku';
+
+ console.log(`Player1 recibe kame kame haaaa (-25pts)`);
+ player1.vidas -= 25;
+ player1.describe();
+ player1.updateVidas();
+ 
+
+
+
