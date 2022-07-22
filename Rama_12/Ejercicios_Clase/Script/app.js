@@ -1,3 +1,5 @@
+
+
 let liBlock = document.querySelectorAll("li");
 console.log(liBlock);
 liBlock.forEach((liElement)=>{
